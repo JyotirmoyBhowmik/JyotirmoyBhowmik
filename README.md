@@ -24,8 +24,6 @@
 
 ```yaml
 Name:        Jyotirmoy Bhowmik
-Role:        Manager — IT Infrastructure & Networks (Grade IS4)
-Company:     Surya Nepal Pvt. Ltd. (ITC Group)
 Experience:  15+ Years Across India & South Asia
 Location:    Kathmandu, Nepal 🇳🇵 / India 🇮🇳
 Clearance:   Multi-Country Coordination (Nepal, Singapore, Malaysia, Bangladesh, Australia)
