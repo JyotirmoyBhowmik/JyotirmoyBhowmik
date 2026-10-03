@@ -1,0 +1,83 @@
+name: Generate Metrics
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+
+      # --- Isometric 3D Contribution Calendar ---
+      - name: 3D Contribution Calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-3d-contrib.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          config_timezone: Asia/Kolkata
+
+      # --- Coding Habits & Facts ---
+      - name: Coding Habits
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-habits.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_days: 30
+          plugin_habits_from: 200
+          config_timezone: Asia/Kolkata
+
+      # --- Languages Breakdown (Detailed) ---
+      - name: Language Details
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 30
+          plugin_languages_analysis_timeout_repositories: 7.5
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
+          plugin_languages_sections: most-used
+          plugin_languages_limit: 10
+          config_timezone: Asia/Kolkata
+
+      # --- Notable Contributions ---
+      - name: Notable Contributions
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-notable.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_notable: yes
+          plugin_notable_from: all
+          plugin_notable_repositories: yes
+          config_timezone: Asia/Kolkata
+
+      # --- Achievement Badges ---
+      - name: Achievements
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics-achievements.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_threshold: B
+          plugin_achievements_display: compact
+          config_timezone: Asia/Kolkata
