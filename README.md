@@ -28,8 +28,6 @@
 # Executive Technology Profile — Jyotirmoy Bhowmik
 # ──────────────────────────────────────────────────────────
 Name:         Jyotirmoy Bhowmik
-Title:        Manager — IT Infrastructure & Networks (Grade IS4)
-Organization: Surya Nepal Pvt. Ltd. (ITC Group)
 Experience:   15+ Years | India & South Asia
 Locations:    🇮🇳 India  •  🇳🇵 Nepal  •  🇸🇬 Singapore  •  🇲🇾 Malaysia  •  🇧🇩 Bangladesh  •  🇦🇺 Australia
 
